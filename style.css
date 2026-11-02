@@ -1,0 +1,372 @@
+/* Group 2 website styles
+   CSS and design: Colten Carlson */
+
+/* General setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #253044;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* Header */
+header {
+    padding: 2rem 1rem;
+    background-color: #173454;
+    color: white;
+    text-align: center;
+}
+
+header h1,
+header h2,
+header p,
+header a {
+    color: white;
+}
+
+/* Navigation */
+nav {
+    padding: 0.75rem 1rem;
+    background-color: #10263e;
+    color: white;
+    text-align: center;
+}
+
+nav ul,
+nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: #f2c14e;
+    color: #10263e;
+}
+
+/* Main content */
+main {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    border: 1px solid #dce2e8;
+    border-radius: 8px;
+    background-color: white;
+}
+
+section,
+article {
+    margin-block: 0 2rem;
+}
+
+main > :last-child {
+    margin-bottom: 0;
+}
+
+aside {
+    margin-block: 1.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid #b58216;
+    background-color: #eef3f8;
+}
+
+/* Headings and text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #173454;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-block: 0 1rem;
+}
+
+li {
+    margin-block: 0.35rem;
+}
+
+a {
+    color: #175c95;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #103f67;
+}
+
+hr {
+    margin-block: 2rem;
+    border: 0;
+    border-top: 1px solid #dce2e8;
+}
+
+/* Images and media */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+figure {
+    margin: 1.5rem 0;
+}
+
+figure img {
+    display: block;
+    border-radius: 6px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: #526174;
+    font-size: 0.9rem;
+}
+
+/* Student testimonials */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #b58216;
+    background-color: #f4f6f8;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+cite {
+    color: #526174;
+}
+
+/* Course and cost tables */
+table {
+    display: block;
+    width: 100%;
+    margin-block: 1.5rem;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+caption {
+    padding-bottom: 0.75rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.85rem 1rem;
+    border: 1px solid #cbd5df;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #173454;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eef3f8;
+}
+
+/* Contact forms */
+form {
+    max-width: 700px;
+}
+
+label {
+    display: block;
+    margin-block: 1rem 0.35rem;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="hidden"]),
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #8998a8;
+    border-radius: 4px;
+    background-color: white;
+    color: #253044;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    margin-block: 1rem;
+    padding: 1rem;
+    border: 1px solid #cbd5df;
+}
+
+legend {
+    padding-inline: 0.5rem;
+    font-weight: bold;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    max-width: 100%;
+    margin-block: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: #173454;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: #28537e;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+    outline: 3px solid #b58216;
+    outline-offset: 3px;
+}
+
+/* Expandable information */
+details {
+    margin-block: 1rem;
+    padding: 1rem;
+    border: 1px solid #cbd5df;
+    border-radius: 4px;
+}
+
+summary {
+    color: #173454;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    background-color: #10263e;
+    color: white;
+    text-align: center;
+}
+
+footer a,
+footer h2,
+footer h3 {
+    color: white;
+}
+
+footer a:hover {
+    color: #f2c14e;
+}
+
+footer p {
+    margin-block: 0.5rem;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul,
+    nav ol {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    main {
+        width: 94%;
+        margin-block: 1rem;
+        padding: 1rem;
+    }
+
+    th,
+    td {
+        padding: 0.65rem;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
